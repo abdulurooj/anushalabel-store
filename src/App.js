@@ -3,21 +3,31 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import { useState } from "react";
 
-function App() {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home addToCart={addToCart} />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
-  );
+.search-container {
+  text-align: center;
+  margin-top: 30px;
 }
 
-export default App;
+.search-bar {
+  width: 50%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #d63384;
+  box-shadow: 0 4px 15px rgba(214,51,132,0.3);
+}
+
+.main-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #800020;
+}
